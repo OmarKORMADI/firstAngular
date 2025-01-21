@@ -1,5 +1,17 @@
 <h2>Liste des films</h2>
-<h4>Nom du film : {{tabFilms[0].nomFilm}}</h4>
-<h4>Nom du film : {{tabFilms[1].nomFilm}}</h4>
-<h4>Nom du film : {{tabFilms[2].nomFilm}}</h4>
+<div class="bloc">
+    <div>
+        <h4>Nom du film : {{tabFilms[0].nomFilm}}</h4>
+        <img [src]='tabFilms[0].imageFilm'  class="image">
+    </div>
+    <div>
+        <h4>Nom du film : {{tabFilms[1].nomFilm}}</h4>
+        <img [src]='tabFilms[1].imageFilm' class="image">
+    </div>
+    <div>
+        <h4>Nom du film : {{tabFilms[2].nomFilm}}</h4>
+        <img [src]='tabFilms[2].imageFilm'  class="image">
 
+    </div>
+
+</div>
