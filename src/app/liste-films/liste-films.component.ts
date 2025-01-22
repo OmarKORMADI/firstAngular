@@ -25,5 +25,13 @@ export class ListeFilmsComponent {
     disponible : true
    }
     ] ;
+    onJaime(i : number) {
+      this.tabFilms[i].nbJaime++ ; 
+      console.log('J\'aime ce film' , this.tabFilms[i].nbJaime );
+      }
+      onJaimepas(i : number) {
+        this.tabFilms[i].nbJeNaimeps++ ; 
+        console.log('J\'aime pas ce film' , this.tabFilms[i].nbJeNaimeps );
+        }
 
 }
