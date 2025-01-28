@@ -1,11 +1,13 @@
 <h2>Liste des films</h2>
 <div class="bloc">
-    <div>
-        <h4>Nom du film : {{tabFilms[0].nomFilm}}</h4>
-        <img [src]='tabFilms[0].imageFilm'  class="image">
-        <button (click)="onJaime(0)" >J'aime</button> {{tabFilms[0].nbJaime}}
-        <button (click)="onJaimepas(0)" >J'aime Pas</button> {{tabFilms[0].nbJeNaimeps}}
+    <div *ngFor="let f of tabFilms ; let index=index">
+        <h4>Nom du film : {{f.nomFilm}}</h4>
+        <img [src]='f.imageFilm'  class="image">
+        <button (click)="onJaime(index)" >J'aime</button> {{f.nbJaime}}
+        <button (click)="onJaimepas(index)" >J'aime Pas</button> {{f.nbJeNaimeps}}
     </div>
+    
+    <!--     
     <div>
         <h4>Nom du film : {{tabFilms[1].nomFilm}}</h4>
         <img [src]='tabFilms[1].imageFilm' class="image">
@@ -17,8 +19,6 @@
         <img [src]='tabFilms[2].imageFilm'  class="image">
         <button (click)="onJaime(2)" >J'aime</button> {{tabFilms[2].nbJaime}}
         <button (click)="onJaimepas(2)" >J'aime Pas</button> {{tabFilms[2].nbJeNaimeps}}
-
-
     </div>
-
+    -->
 </div>
